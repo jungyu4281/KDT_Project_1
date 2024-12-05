@@ -3,6 +3,7 @@ import MatchData from '../components/MatchData';
 import MatchPoints from '../components/MatchPoints';
 import StadiumInfo from '../components/StadiumInfo';
 import MatchRules from '../components/MatchRules';
+import RefundPolicy from '../components/RefundPolicy';
 
 const MatchPage = () => {
   return (
@@ -23,6 +24,7 @@ const MatchPage = () => {
         }}
       />
       <MatchRules/>
+      <RefundPolicy/>
     </div>
   );
 };

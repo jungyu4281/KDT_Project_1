@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import styles from './MatchRules.module.css';
-import matchRulesData from '../data/matchRulesData'; 
+import matchRulesData from '../data/matchRulesData';
 
 const MatchRules = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,8 +19,10 @@ const MatchRules = () => {
         />
       </div>
 
+      {/* 접히고 열리는 내용 */}
       {isOpen && (
         <div className={styles.content}>
+          {/* 매치 규칙 섹션 */}
           <section>
             <h3 className={styles.subtitle}>매치 규칙</h3>
             <ul className={styles.list}>
@@ -30,6 +32,7 @@ const MatchRules = () => {
             </ul>
           </section>
 
+          {/* 진행 방식 섹션 */}
           <section>
             <h3 className={styles.subtitle}>진행 방식</h3>
             <ul className={styles.list}>
@@ -39,6 +42,7 @@ const MatchRules = () => {
             </ul>
           </section>
 
+          {/* 알아두면 좋아요 섹션 */}
           <section>
             <h3 className={styles.subtitle}>알아두면 좋아요</h3>
             <ul className={styles.list}>
@@ -52,9 +56,5 @@ const MatchRules = () => {
     </div>
   );
 };
-MatchRules.defaultProps = {
-    rules: matchRulesData.rules,
-    process: matchRulesData.process,
-    additional: matchRulesData.additional,
-};
+
 export default MatchRules;
