@@ -1,3 +1,14 @@
 npm start
 
 npm install react-scripts
+
+
+
+git pull origin main
+
+
+
+-> vs깃등록 딸깍
+git add .
+git commit -m "변경한 내용에 대한 설명"
+git push origin main
