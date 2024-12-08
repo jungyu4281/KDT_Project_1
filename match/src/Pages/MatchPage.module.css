@@ -1,0 +1,41 @@
+/* 전체 페이지 배경 */
+.matchPage {
+    background-color: #f5f7fa;
+    padding: 0px 30%; /* 좌우 간격을 약간 더 넓게 */
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* 메인 콘텐츠 레이아웃 */
+  .mainContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* 섹션 간의 간격 */
+  }
+  
+  /* 왼쪽 섹션 */
+  .leftSection {
+    flex: 6;
+    max-width: 900px; /* 왼쪽 섹션의 최대 너비 제한 */
+    min-width: 0;
+  }
+  
+  /* 오른쪽 섹션 */
+  .rightSection {
+    flex: 4;
+    max-width: 370px; 
+    /* background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;*/
+  }
+  
+  /* 이미지 크기 조정 */
+  .mainImage {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  

@@ -1,0 +1,70 @@
+/* 섹션 스타일 */
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+  
+  /* 섹션 헤더 */
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between; /* 화살표를 오른쪽 끝으로 배치 */
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1; /* 제목을 왼쪽 정렬 */
+  }
+  
+  /* 화살표 스타일 */
+  .arrowDown,
+  .arrowUp {
+    margin-left: auto; /* 화살표를 오른쪽 끝으로 이동 */
+    width: 10px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .arrowUp {
+    transform: rotate(-135deg);
+  }
+  
+  /* 본문 스타일 */
+  .sectionBody {
+    padding-top: 15px;
+  }
+  
+  /* 매치 규칙 */
+  .matchRule {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  /* 테이블 */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+  }
+  
+  td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .helptext {
+    font-size: 12px;
+    color: #666;
+    display: block;
+  }
+  

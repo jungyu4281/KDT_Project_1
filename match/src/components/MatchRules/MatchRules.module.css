@@ -1,0 +1,64 @@
+/* 섹션 스타일 */
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+/* 섹션 헤더 */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 화살표 스타일 */
+.arrowDown {
+  width: 10px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  transition: transform 0.3s;
+}
+
+.arrowUp {
+  width: 10px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-135deg);
+  transition: transform 0.3s;
+}
+
+/* 섹션 본문 */
+.sectionBody {
+  margin-top: 15px;
+}
+
+/* 리스트 스타일 */
+.matchRule {
+  margin: 20px 0;
+  padding-left: 20px;
+  list-style-type: disc; /* 점 모양 리스트 */
+}
+
+.matchRule h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.matchRule li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}

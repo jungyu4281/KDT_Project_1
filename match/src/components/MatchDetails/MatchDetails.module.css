@@ -1,0 +1,111 @@
+.matchDetails {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  height: 16rem;
+}
+
+.stickyWrap {
+  position: relative;
+}
+
+.matchTime {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.matchPlace {
+  margin-bottom: 15px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.title a {
+  text-decoration: none;
+  color: black;
+}
+
+.wtgTool {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
+.copy,
+.map {
+  cursor: pointer;
+  color: #838383;
+  text-decoration: underline;
+}
+
+
+.dataItem {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.matchFee {
+  margin-top: 15px;
+}
+
+.money {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.matchApplyButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.buttonText {
+  font-size: 12px;
+  font-weight: bold;
+  color: #1570ff;
+  border-bottom: 2px solid #1570ff;
+  margin: 0;
+}
+
+.cancelInfo {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+
+.applyFull {
+  width: 8rem;
+  padding: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: not-allowed;
+}
+
+.Psize{
+  font-size: 12px;
+}
+
+.applyFull p {
+  margin: 0;
+  font-size: 14px;
+}
