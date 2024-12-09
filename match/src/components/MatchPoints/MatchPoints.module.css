@@ -60,7 +60,7 @@
   
   /* 클릭 가능한 텍스트 */
   .clickable {
-    color: #1564ff;
+    color: black;
     text-decoration: underline;
     cursor: pointer;
   }

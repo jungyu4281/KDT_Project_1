@@ -1,5 +1,5 @@
 import React from 'react';
-import MatchData from '../components/MatchData';
+import MatchData from '../components/MatchData/MatchData';
 import MatchPoints from '../components/MatchPoints/MatchPoints';
 import StadiumInfo from '../components/Stadiuminfo/StadiumInfo';
 import MatchRules from '../components/MatchRules/MatchRules';
