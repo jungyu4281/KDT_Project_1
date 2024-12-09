@@ -1,122 +1,70 @@
-/* 섹션 스타일 */
-.section {
-    margin-bottom: 20px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sectionHeader {
-    margin-bottom: 15px;
-  }
-  
-  .sectionTitle {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  /* 팀 선택 스타일 */
-  .teamSelect {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  .teamSelectItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .teamSelected {
-    font-weight: bold;
-  }
-  
-  .teamColorRed {
-    width: 20px;
-    height: 20px;
-    background: red;
-    border-radius: 50%;
-  }
-  
-  .teamColorYellow {
-    width: 20px;
-    height: 20px;
-    background: yellow;
-    border-radius: 50%;
-  }
-  
-  /* 레벨 분포도 스타일 */
-  .matchLevels {
-    margin-bottom: 20px;
-  }
-  
-  .sectionSubtitle {
-    font-size: 16px;
-    margin: 10px 0;
-  }
-  
-  .graphBar {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  .graphItem {
-    text-align: center;
-    flex: 1;
-  }
-  
-  .graphFrame {
-    height: 100px;
-    background: #eaeaea;
-    position: relative;
-  }
-  
-  .graphGage {
-    background: #1564ff;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-  
-  .graphValue {
-    margin: 5px 0;
-  }
-  
-  .graphLabel {
-    font-size: 12px;
-    color: #666;
-  }
-  
-  .levelInform {
-    font-size: 12px;
-    color: #666;
-    text-align: center;
-  }
-  
-  /* 차트 스타일 */
-  .chartSection {
-    margin-top: 20px;
-  }
-  
-  .chartHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .chartContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  /* POM 정보 */
-  .pomInform {
-    text-align: center;
-    font-size: 14px;
-  }
-  
+.matchDataSection {
+  max-width: 600px; 
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 1rem;
+}
+
+.matchTeams {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.teamItem {
+  flex: 1;
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.teamItem.selected {
+  background-color: #d4edfc;
+  border: 1px solid #3498db;
+}
+
+/* 레벨 분포도 */
+.levelDistribution {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.levelChart {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+/* 추가 스타일 조정 */
+.chartBar div {
+  width: 100%;
+  background-color: #3498db;
+}
+
+.playStyleChart {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.playStyleLegend {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.pomInfo {
+  margin-top: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
