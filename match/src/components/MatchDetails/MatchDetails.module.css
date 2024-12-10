@@ -43,26 +43,64 @@
 
 .matchFee {
   margin-top: 15px;
-  border-top: 1px solid #ddd; /* 추가된 위쪽 선 */
-  border-bottom: 1px solid #ddd; /* 기존 아래쪽 선 */
-  padding: 20px 0;
+  padding: 10px 0; /* 상하 여백 */
+}
+
+.contentBlock {
+  padding: 20px 0; /* 위아래 패딩 */
+  border-top: 1px solid #ddd; /* 위쪽 선 */
+  border-bottom: 1px solid #ddd; /* 아래쪽 선 */
 }
 
 .money {
   font-size: 16px;
   font-weight: bold;
   color: #000;
+  margin-bottom: 10px; /* 아래 여백 추가 */
 }
 
-.matchApplyButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 15px 0;
+.strikeThrough {
+  text-decoration: line-through;
+  color: #a1a1a1;
 }
 
-.applyFull {
+.discountText {
+  font-size: 12px;
+  color: #1570ff;
+  margin-top: 5px;
+}
+
+.matchend {
+  font-size: 10px;
+  color: red;
+  margin-top: 5px;
+}
+
+.matchClosed {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+}
+
+.applyButton {
+  width: 90%;
+  padding: 10px;
+  background-color: #1570ff;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 10px auto; /* 버튼만 가운데 정렬 */
+  display: block;
+  text-align: center;
+}
+
+.applyButton:hover {
+  background-color: #0056b3;
+}
+
+.disabledButton {
   width: 90%;
   padding: 10px;
   background-color: #eeeeee;
@@ -71,9 +109,7 @@
   color: #a1a1a1;
   font-size: 14px;
   cursor: not-allowed;
-}
-
-.matchend{
-  font-size: 10px;
-  color: red;
+  margin: 10px auto; /* 버튼만 가운데 정렬 */
+  display: block;
+  text-align: center;
 }
