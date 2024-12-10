@@ -6,13 +6,9 @@
   line-height: 1.5;
 }
 
-.stickyWrap {
-  position: relative;
-}
-
 .matchTime {
   font-size: 14px;
-  color: #666;
+  color: black;
   margin-bottom: 10px;
 }
 
@@ -38,7 +34,6 @@
   font-size: 12px;
 }
 
-
 .copy,
 .map {
   cursor: pointer;
@@ -46,15 +41,11 @@
   text-decoration: underline;
 }
 
-
-.dataItem {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
 .matchFee {
   margin-top: 15px;
+  border-top: 1px solid #ddd; /* 추가된 위쪽 선 */
+  border-bottom: 1px solid #ddd; /* 기존 아래쪽 선 */
+  padding: 20px 0;
 }
 
 .money {
@@ -63,47 +54,26 @@
   color: #000;
 }
 
-
 .matchApplyButton {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  border-top: 1px solid #ddd;
   padding: 15px 0;
 }
 
-.buttonText {
-  font-size: 12px;
-  font-weight: bold;
-  color: #1570ff;
-  border-bottom: 2px solid #1570ff;
-  margin: 0;
-}
-
-.cancelInfo {
-  font-size: 12px;
-  color: #888;
-  margin-top: 5px;
-}
-
-
 .applyFull {
-  width: 8rem;
+  width: 90%;
   padding: 10px;
-  background-color: #ddd;
+  background-color: #eeeeee;
   border: none;
   border-radius: 5px;
-  color: #ffffff;
+  color: #a1a1a1;
   font-size: 14px;
   cursor: not-allowed;
 }
 
-.Psize{
-  font-size: 12px;
-}
-
-.applyFull p {
-  margin: 0;
-  font-size: 14px;
+.matchend{
+  font-size: 10px;
+  color: red;
 }

@@ -1,12 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './RefundPolicy.module.css';
 
 const RefundPolicy = () => {
+    const [isExpanded, setIsExpanded] = useState(false);
+  
+    const toggleExpand = () => {
+      setIsExpanded(!isExpanded);
+    };
+  
+
   return (
     <section className={styles.section}>
-      <div className={styles.sectionHeader}>
-        <h3 className={styles.sectionTitle}>환불 정책</h3>
+      <div className={styles.sectionHeader} onClick={toggleExpand}>
+        <h3 className={styles.sectionTitle}>
+          환불 정책
+        </h3>
+          <span className={isExpanded ? styles.arrowUp : styles.arrowDown}></span>
       </div>
+      
+      {isExpanded &&(
       <div className={styles.sectionBody}>
         {/* 취소 환불 규정 */}
         <ul className={styles.matchRule}>
@@ -167,6 +179,7 @@ const RefundPolicy = () => {
           </li>
         </ul>
       </div>
+      )}
     </section>
   );
 };

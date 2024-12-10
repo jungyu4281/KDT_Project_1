@@ -69,22 +69,17 @@ const MatchPoints = () => {
       </div>
 
       {/* 추가 정보 섹션 */}
+      {/* 추가 정보 섹션 */}
       <div className={styles.matchPointsAdditional}>
         <ul>
           <li className={styles.infoList}>
             <img
-              src="https://d31wz4d3hgve8q.cloudfront.net/static/img/ic_info_woman.svg"
+              src="https://d31wz4d3hgve8q.cloudfront.net/static/img/ic_manager.svg"
               className={styles.icon}
-              alt="여성 플래버"
+              alt="매니저"
             />
             <div>
-              <p>아직 여자 플래버는 0명이에요</p>
-              <pre className={styles.infoListTxtSm}>
-                <div>
-                    서로 배려하며, 함께 즐겨요. 내 힘이 누군가에게 큰 아픔이 될 수있습니다. 
-                    </div>
-                지나친 몸싸움과 강한 슛을 조심해 주세요.
-              </pre>
+              <p>강민기 매니저가 진행해요</p>
             </div>
           </li>
         </ul>

@@ -35,24 +35,29 @@ const MatchData = () => {
             </li>
           ))}
         </ul>
-        <p className={styles.levelInform}>
+        <div className={styles.levelInform}>
+          <img
+            src="https://d31wz4d3hgve8q.cloudfront.net/static/img/ic_caution.svg"
+            alt="경고 아이콘"
+            className={styles.warningIcon}
+          />
           팀 레벨이 맞지 않으면 친구끼리 와도 다른 팀이 될 수 있어요
-        </p>
+        </div>
       </div>
 
       {/* POM 정보 섹션 */}
       <div className={styles.pomInfo}>
-        <p className={styles.pomText}>
-          <img
-            src="/icons/sunglasses.svg"
-            alt=""
-            className={styles.pomIcon}
-          />
-          POM이 16명 있어요
-        </p>
-        <p className={styles.pomDescription}>
-          POM은 서로 존중하고 격려하며 함께 즐길 수 있도록 매치에 긍정적인 에너지를 불어넣어 주는 플래버예요.
-        </p>
+        <img
+          src="https://d31wz4d3hgve8q.cloudfront.net/static/img/ic_pom.svg" // 아이콘 경로
+          alt="POM 아이콘"
+          className={styles.pomIcon}
+        />
+        <div>
+          <p className={styles.pomCount}>POM이 9명 있어요</p>
+          <p className={styles.pomDescription}>
+            POM은 서로 존중하고 격려하며 함께 즐길 수 있도록 매치에 긍정적인 에너지를 불어넣어 주는 플레이어예요.
+          </p>
+        </div>
       </div>
     </div>
   );

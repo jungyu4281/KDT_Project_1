@@ -65,16 +65,19 @@
 }
 
 .levelInform {
-  margin-top: 15px;
+  display: flex;
+  align-items: center; /* 아이콘과 텍스트를 수평 정렬 */
   font-size: 14px;
-  color: #444;
+  color: #666; /* 텍스트 색상 */
+  line-height: 1.5;
 }
 
-.pomDescription {
-  font-size: 10px;
-  color: #888;
-  line-height: 1.6;
+.warningIcon {
+  width: 20px; /* 아이콘 크기 */
+  height: 20px;
+  margin-right: 8px; /* 아이콘과 텍스트 간격 */
 }
+
 
 .averageLevel {
   margin-top: 10px;
@@ -85,4 +88,29 @@
 .highlighted {
   font-weight: bold;
   color: #1570ff;
+}
+
+.pomInfo {
+  display: flex;
+  align-items: flex-start; /* 아이콘과 텍스트를 상단 정렬 */
+  gap: 8px; /* 아이콘과 텍스트 간격 */
+  margin-top: 15px; /* 섹션 상단 간격 */
+}
+
+.pomIcon {
+  width: 20px; /* 아이콘 크기 */
+  height: 20px;
+}
+
+.pomCount {
+  font-size: 16px; /* 첫 번째 줄 텍스트 크기 */
+  color: #333; /* 진한 텍스트 색상 */
+  margin: 0 0 5px 0; /* 하단 간격 */
+}
+
+.pomDescription {
+  font-size: 14px; /* 설명 텍스트 크기 */
+  color: #888; /* 연한 텍스트 색상 */
+  margin: 0; /* 기본 여백 제거 */
+  line-height: 1.5; /* 줄 간격 */
 }

@@ -44,11 +44,10 @@ const MatchDetails = () => {
       <div className={styles.matchFee}>
         <span className={styles.money}>10,000원</span>
         <span> / 2시간</span>
+        <div className={styles.matchend}>매치 시작 10분 전 신청이 마감돼요</div>
       </div>
       <div className={styles.matchApplyButton}>
-        <p className={styles.buttonText}>다음 일정을 미리 예약하세요</p>
-        <p className={styles.cancelInfo}>2일 전까지 무료 취소</p>
-        <button className={styles.applyFull}>끝난 매치</button>
+        <button className={styles.applyFull}>신청이 마감되었어요</button>
       </div>
     </div>
   );
