@@ -1,11 +1,9 @@
 .matchDetails {
   background-color: #ffffff;
-  border: 1px solid #ddd;
   border-radius: 5px;
   padding: 15px;
   font-family: Arial, sans-serif;
   line-height: 1.5;
-  height: 16rem;
 }
 
 .stickyWrap {

@@ -23,6 +23,8 @@
 
 .rightSection {
   flex: 2;
+  position: sticky;
+  top: 1rem;
 }
 
 /* 이미지 크기 조정 */

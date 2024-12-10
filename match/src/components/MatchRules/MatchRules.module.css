@@ -1,7 +1,7 @@
 /* 섹션 스타일 */
 .section {
   margin-bottom: 20px;
-  padding: 0px 20px 0px 10px;
+  padding: 0px 10px; /* 좌우 간격 수정 */
   background-color: #ffffff;
   border-radius: 5px;
   font-family: Arial, sans-serif;
@@ -43,8 +43,8 @@
 /* 리스트 스타일 */
 .matchRule {
   margin: 0;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding-left: 10px; /* 섹션 헤더와 동일한 간격 */
+  padding-bottom: 10px;
   list-style-type: disc; /* 점 모양 리스트 */
 }
 
@@ -55,6 +55,7 @@
 }
 
 .matchRule li {
-  margin-bottom: 5px;
+  margin-left: 20px;
+  margin-bottom: 10px;
   font-size: 14px;
 }

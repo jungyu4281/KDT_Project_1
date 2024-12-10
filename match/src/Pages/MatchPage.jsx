@@ -8,25 +8,15 @@ import MatchDetails from '../components/MatchDetails/MatchDetails';
 import ContentHeader from '../components/ContentHeader/ContentHeader';
 import styles from './MatchPage.module.css'; 
 
-const MatchPage = () => {
+const MatchPageDone = () => {
   return (
     <div className={styles.matchPage}>
       <ContentHeader />
       <div className={styles.mainContent}>
         <div className={styles.leftSection}>
-          <MatchData
-            date="2024-12-05"
-            teams={['Team A', 'Team B']}
-            score="2-1"
-          />
           <MatchPoints />
-          <StadiumInfo
-            stadium={{
-              name: 'Awesome Stadium',
-              location: 'Seoul, Korea',
-              address: '123 Stadium Road, Seoul',
-            }}
-          />
+          <MatchData />
+          <StadiumInfo/>
           <MatchRules />
           <RefundPolicy />
         </div>
@@ -40,4 +30,4 @@ const MatchPage = () => {
   );
 };
 
-export default MatchPage;
+export default MatchPageDone;

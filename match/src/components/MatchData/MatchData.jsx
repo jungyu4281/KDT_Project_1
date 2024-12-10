@@ -2,53 +2,59 @@ import React from 'react';
 import styles from './MatchData.module.css';
 
 const MatchData = () => {
+  // 그래프 데이터
+  const levels = [
+    { label: '루키', value: 0 },
+    { label: '스타터', value: 0 },
+    { label: '비기너', value: 8 },
+    { label: '아마추어', value: 77 },
+    { label: '세미프로', value: 15 },
+    { label: '프로', value: 0 },
+  ];
+
   return (
-    <section className={styles.matchDataSection}>
-      <div className={styles.matchHeader}>
-        <h3>매치 데이터</h3>
-      </div>
+    <div className={styles.sectionBody}>
+      <h2 className={styles.sectionTitle}>매치 데이터</h2>
 
-      <div className={styles.matchTeams}>
-        <div className={`${styles.teamItem} ${styles.selected}`}>전체<br />아마추어3</div>
-        <div className={styles.teamItem}>
-          <span className={styles.teamColor} style={{ backgroundColor: 'red' }}></span>
-          아마추어3
-        </div>
-        <div className={styles.teamItem}>
-          <span className={styles.teamColor} style={{ backgroundColor: 'yellow' }}></span>
-          아마추어3
-        </div>
-      </div>
-
-      <div className={styles.levelDistribution}>
-        <h4>레벨 분포도</h4>
-        <div className={styles.levelChart}>
-          <div className={styles.chartBar}>
-            <div style={{ height: '0%' }}></div>
-            <span>0%</span>
-            <span>루키</span>
-          </div>
-          <div className={styles.chartBar}>
-            <div style={{ height: '8%' }}></div>
-            <span>8%</span>
-            <span>비기너</span>
-          </div>
-          <div className={styles.chartBar}>
-            <div style={{ height: '77%' }}></div>
-            <span>77%</span>
-            <span>아마추어</span>
-          </div>
-          <div className={styles.chartBar}>
-            <div style={{ height: '15%' }}></div>
-            <span>15%</span>
-            <span>세미프로</span>
-          </div>
-        </div>
-        <p className={styles.chartLegend}>
-          팀 레벨이 맞지 않으면 친구끼리 와도 다른 팀이 될 수 있어요.
+      <div className={styles.matchLevels}>
+        <h4 className={styles.sectionSubtitle}>레벨 분포도</h4>
+        <p className={styles.averageLevel}>
+          예상 평균 레벨은 <span className={styles.highlighted}>아마추어3</span>입니다.
+        </p>
+        <ul className={styles.matchLevelsGraphBar}>
+          {levels.map((level, index) => (
+            <li className={styles.graphBarItem} key={index}>
+              <div className={styles.graphBarFrame}>
+                <span
+                  className={styles.graphBarGage}
+                  style={{ height: `${level.value}%` }}
+                ></span>
+              </div>
+              <span className={styles.graphBarValue}>{level.value}%</span>
+              <span className={styles.graphBarLabel}>{level.label}</span>
+            </li>
+          ))}
+        </ul>
+        <p className={styles.levelInform}>
+          팀 레벨이 맞지 않으면 친구끼리 와도 다른 팀이 될 수 있어요
         </p>
       </div>
-    </section>
+
+      {/* POM 정보 섹션 */}
+      <div className={styles.pomInfo}>
+        <p className={styles.pomText}>
+          <img
+            src="/icons/sunglasses.svg"
+            alt=""
+            className={styles.pomIcon}
+          />
+          POM이 16명 있어요
+        </p>
+        <p className={styles.pomDescription}>
+          POM은 서로 존중하고 격려하며 함께 즐길 수 있도록 매치에 긍정적인 에너지를 불어넣어 주는 플래버예요.
+        </p>
+      </div>
+    </div>
   );
 };
 
