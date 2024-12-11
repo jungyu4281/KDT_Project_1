@@ -26,3 +26,10 @@ npm install react-slick slick-carousel
 
 
 https://www.plabfootball.com/match/466096/ (소셜 매치 종료 링크)
+
+
+
+카카오 지도 api (링크 및 양식들)
+https://developers.kakao.com/console/app/1173208/config/appKey
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=a8eb9b1519926eb93d8437268eda9720"></script>
+a8eb9b1519926eb93d8437268eda9720

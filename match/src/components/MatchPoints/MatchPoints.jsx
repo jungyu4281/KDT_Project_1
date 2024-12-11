@@ -1,17 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './MatchPoints.module.css';
 
 const MatchPoints = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleModalOpen = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleModalClose = () => {
-    setIsModalOpen(false);
-  };
-
   return (
     <section className={styles.section}>
       {/* 매치 포인트 제목 */}
@@ -59,12 +49,7 @@ const MatchPoints = () => {
             className={styles.icon}
             alt="신발"
           />
-          <p
-            className={styles.clickable}
-            onClick={handleModalOpen}
-          >
-            풋살화/운동화
-          </p>
+          <p> 풋살화/운동화</p>
         </div>
       </div>
 
@@ -84,29 +69,6 @@ const MatchPoints = () => {
           </li>
         </ul>
       </div>
-    {/* 모달 */}
-        {isModalOpen && (
-            <div className={styles.modalOverlay} onClick={handleModalClose}>
-                <div
-                    className={styles.modalContent}
-                    onClick={(e) => e.stopPropagation()}
-                >
-                    <div className={styles.modalHeader}>
-                        <h4>풋살화/운동화</h4>
-                        <button
-                            className={styles.modalCloseButton}
-                            onClick={handleModalClose}
-                        >
-                            &times;
-                        </button>
-                    </div>
-                    <ul>
-                        <li>풋살화 또는 운동화만 착용할 수 있어요</li>
-                        <li>축구화를 착용할 경우 경기에 참여할 수 없습니다</li>
-                    </ul>
-                </div>
-            </div>
-        )}
     </section>
   );
 };

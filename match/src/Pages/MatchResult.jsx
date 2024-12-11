@@ -16,8 +16,8 @@ const MatchResult = () => {
       <div className={styles.mainContent}>
         <div className={styles.leftSection}>
           <PlayerOfTheMatch/>
-          <TeamSelector/>
           <MatchPoints />
+          <TeamSelector/>
           <StadiumInfo/>
           <MatchRules />
           <RefundPolicy />
