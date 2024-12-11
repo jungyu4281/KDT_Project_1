@@ -9,7 +9,7 @@ const MatchDetails = () => {
   const [status, setStatus] = useState('') // 매치 상태
   const [currentTime, setCurrentTime] = useState(new Date()) // 현재 시간
 
-  const matchDate = useMemo(() => new Date('2024-12-20T15:00:00'), [])
+  const matchDate = useMemo(() => new Date('2024-12-30T15:00:00'), [])
   const locationInfo = useMemo(
     () => ({
       address: '서울특별시 영등포구 선유로 138',

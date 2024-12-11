@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './TeamSelctor.module.css'
+import styles from './TeamSelector.module.css';
 
 const TeamSelector = () => {
   // 그래프 데이터
@@ -19,43 +19,45 @@ const TeamSelector = () => {
       {/* 팀 선택 섹션 */}
       <div className={styles.teamSelector}>
         <div className={`${styles.team} ${styles.selected}`}>
-          <div className={styles.teamIcon}>
-            <img
-              src="https://via.placeholder.com/40"
-              alt="전체"
-              className={styles.teamImage}
-            />
-          </div>
           <p className={styles.teamName}>전체</p>
           <p className={styles.teamLevel}>아마추어2</p>
         </div>
         <div className={styles.team}>
           <div className={styles.teamIcon}>
-            <img
-              src="https://via.placeholder.com/40"
-              alt="노랑팀"
-              className={`${styles.teamImage} ${styles.teamYellow}`}
-            />
+            <div
+              className={styles.teamImage}
+              style={{
+                backgroundImage: 'url(/images/jersey-red.png)'
+              }}
+            >
+              플랩
+            </div>
           </div>
           <p className={styles.teamName}>아마추어2</p>
         </div>
         <div className={styles.team}>
           <div className={styles.teamIcon}>
-            <img
-              src="https://via.placeholder.com/40"
-              alt="초록팀"
-              className={`${styles.teamImage} ${styles.teamGreen}`}
-            />
+            <div
+              className={styles.teamImage}
+              style={{
+                backgroundImage: 'url(/images/jersey-yellow.png)'
+              }}
+            >
+              플랩
+            </div>
           </div>
-          <p className={styles.teamName}>아마추어3</p>
+          <p className={styles.teamName}>아마추어2</p>
         </div>
         <div className={styles.team}>
           <div className={styles.teamIcon}>
-            <img
-              src="https://via.placeholder.com/40"
-              alt="빨강팀"
-              className={`${styles.teamImage} ${styles.teamRed}`}
-            />
+            <div
+              className={styles.teamImage}
+              style={{
+                backgroundImage: 'url(/images/jersey-blue.png)'
+              }}
+            >
+              플랩
+            </div>
           </div>
           <p className={styles.teamName}>아마추어3</p>
         </div>

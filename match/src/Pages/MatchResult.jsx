@@ -6,7 +6,7 @@ import RefundPolicy from '../components/RefundPolicy/RefundPolicy';
 import MatchDetails from '../components/MatchDetails/MatchDetails';
 import ContentHeader from '../components/ContentHeader/ContentHeader';
 import styles from './MatchResult.module.css'; 
-import TeamSelector from '../components/TeamSelector/TeamSelctor';
+import TeamSelector from '../components/TeamSelector/TeamSelector';
 import PlayerOfTheMatch from '../components/PlayerOfTheMatch/PlayerOfTheMatch';
 
 const MatchResult = () => {
