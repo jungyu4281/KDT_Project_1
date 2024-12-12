@@ -1,0 +1,141 @@
+/* 매치 포인트 섹션 */
+.section {
+    margin-bottom: 20px;
+    padding: 0px 20px 20px 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* 매치 포인트 제목 */
+  .resultAndVideosTitle {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  /* 매치 포인트 리스트 */
+  .resultAndVideos {
+    display: flex;
+    align-items: center; /* 중앙 정렬 */
+    justify-content: space-between;
+    background-color: #ffffff; /* 기본 배경 */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .resultAndVideosIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 40px; /* 크기 증가 */
+    height: 40px; /* 크기 증가 */
+  }
+
+  .resultAndVideosIcons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    cursor: pointer;
+    width: 25px; /* 크기 증가 */
+    height: 25px; /* 크기 증가 */
+  }
+  
+  .resultAndVideosImage {
+    width: 100%; /* 박스 크기에 맞춤 */
+    height: 100%; /* 박스 크기에 맞춤 */
+    background-size: contain; /* 이미지가 잘리지 않도록 설정 */
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: center;
+    color: white;
+  }
+  .resultAndVideosScorebord{
+    background-color: #f4f4f4;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  
+  /* 모달 스타일 추가 */
+  .modalOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+.modalContent {
+    overflow-y: auto;
+    background: #fff;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 480px;
+    max-height: 90%;
+    position: relative;
+    text-align: left;
+    line-height: 1.4;
+    padding: 20px;
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .modalCloseButton {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .modalButtons {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 20px 0px 20px;
+  }
+  
+  .evaluateButton, .backButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .evaluateButton {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .backButton {
+    background-color: #f8f9fa;
+    color: #212529;
+  }

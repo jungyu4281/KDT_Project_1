@@ -9,7 +9,7 @@ const MatchDetails = () => {
   const [status, setStatus] = useState('') // 매치 상태
   const [currentTime, setCurrentTime] = useState(new Date()) // 현재 시간
 
-  const matchDate = useMemo(() => new Date('2024-12-30T15:00:00'), [])
+  const matchDate = useMemo(() => new Date('2024-12-11 T15:00:00'), [])
   const locationInfo = useMemo(
     () => ({
       address: '서울특별시 영등포구 선유로 138',
@@ -26,7 +26,10 @@ const MatchDetails = () => {
     const diffDays = Math.ceil(diffInMilliseconds / (1000 * 60 * 60 * 24))
     const diffMinutes = Math.floor(diffInMilliseconds / (1000 * 60))
 
-    if (diffDays > 10) {
+    if (matchDate < now) {
+      // 매치 날짜가 현재보다 과거인 경우
+      return 'past'
+    } else if (diffDays > 10) {
       return 'earlyBird'
     } else if (diffDays >= 0 && diffMinutes > 10) {
       return 'regular'
@@ -42,7 +45,6 @@ const MatchDetails = () => {
         setIsSticky(rect.top <= 0)
       }
     }
-
 
     setStatus(calculateStatus())
     window.addEventListener('scroll', handleScroll)
@@ -146,6 +148,19 @@ const MatchDetails = () => {
             </div>
             <button className={styles.disabledButton} disabled>
               마감되었습니다
+            </button>
+          </div>
+        )}
+
+        {status === 'past' && (
+          <div className={styles.statusBlock}>
+            <div className={styles.contentBlock}>
+              <span className={styles.money}>10,000원</span>
+              <span> / 2시간</span>
+              <div className={styles.matchEnded}>종료된 매치입니다</div>
+            </div>
+            <button className={styles.disabledButton} disabled>
+              종료된 매치
             </button>
           </div>
         )}

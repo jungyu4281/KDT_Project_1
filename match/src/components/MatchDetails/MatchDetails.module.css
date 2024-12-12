@@ -70,16 +70,10 @@
   margin-top: 5px;
 }
 
-.matchend {
+.matchend ,.matchClosed, .matchEnded {
   font-size: 10px;
   color: red;
   margin-top: 5px;
-}
-
-.matchClosed {
-  font-size: 14px;
-  color: red;
-  margin-top: 10px;
 }
 
 .applyButton {

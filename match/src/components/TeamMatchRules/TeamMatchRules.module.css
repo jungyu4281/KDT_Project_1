@@ -1,0 +1,62 @@
+/* 전체 섹션 스타일 */
+.section {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section__header {
+    margin-bottom: 20px;
+  }
+  
+  .section__title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .arrow_down::after {
+    content: "▼";
+    margin-left: 10px;
+    font-size: 12px;
+  }
+  
+  .stadInner {
+    border: none;
+  }
+  
+  .section__body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* 규칙 리스트 아이템 */
+  .rule_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 20px;
+    background: rgb(248, 250, 251);
+  }
+  
+  .rule_icon {
+    margin-right: 8px;
+    width: 48px;
+    height: 48px;
+  }
+  
+  .rule_title {
+    margin-bottom: 4px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .rule_description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
