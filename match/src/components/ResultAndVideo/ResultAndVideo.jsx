@@ -7,7 +7,7 @@ const ResultAndVideo = () => {
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
-
+  // 영상 다운로드 아이콘 인증해서 팀인지 아닌지 구별하고 받아서 보여주고 안보여주는 형식
   // 매치 데이터 (실제로는 API나 props로 받아올 수 있습니다)
   // 얘를 데이터 한줄의 css만 만들고 DB에서 싹다 받는거면? 낫밷일듯? 
   const matchData = [
@@ -32,7 +32,7 @@ const ResultAndVideo = () => {
   return (
     <section className={styles.section}>
       <div className={styles.resultAndVideosTitle}>
-        <h4>결과 및 매치영상</h4>
+        <h4>일정 및 결과</h4>
       </div>
 
       {matchData.map((match, index) => (
@@ -63,7 +63,7 @@ const ResultAndVideo = () => {
             {`${match.round}경기 ${match.team2.name}(${getResult(match.team2.score, match.team1.score)})`}
           </div>
           <FaPlay className={styles.resultAndVideosIcons} onClick={openModal} />
-          <FaDownload className={styles.resultAndVideosIcons} />
+          <FaDownload className={styles.resultAndVideosIcons} onClick={openModal}/>
         </div>
       ))}
 
@@ -74,7 +74,7 @@ const ResultAndVideo = () => {
               <span>매치평가 알림</span>
               <button className={styles.modalCloseButton} onClick={closeModal}>X</button>
             </div>
-            <p>영상을 시청하시려면 상호평가를 완료해야 합니다.</p>
+            <p>영상을 시청 및 다운로드 하시려면 상호평가를 완료해야 합니다.</p>
             <div className={styles.modalButtons}>
               <button className={styles.evaluateButton}>평가하러 가기</button>
               <button className={styles.backButton} onClick={closeModal}>돌아가기</button>

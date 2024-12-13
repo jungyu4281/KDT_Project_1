@@ -3,11 +3,13 @@ import MatchPoints from '../components/MatchPoints/MatchPoints';
 import StadiumInfo from '../components/Stadiuminfo/StadiumInfo';
 import TeamPreview from '../components/TeamPreview/TeamPreview';
 import TeamMatchRules from '../components/TeamMatchRules/TeamMatchRules';
-// import LeagueManners from '../components/LeagueManners/LeagueManners';
-import RefundPolicy from '../components/RefundPolicy/RefundPolicy';
+import LeagueMannerGuide from '../components/LeagueMannerGuide/LeagueMannerGuide';
+import TeamRefundPolicy from '../components/TeamRefundPolicy/TeamRefundPolicy';
 import MatchDetails from '../components/MatchDetails/MatchDetails';
 import ContentHeader from '../components/ContentHeader/ContentHeader';
+import LeagueMatchRule from '../components/LeagueMatchRule/LeagueMatchRule';
 import styles from './TeamMatch.module.css'; 
+import ResultAndVideo from '../components/ResultAndVideo/ResultAndVideo';
 
 const TeamMatchResult = () => {
   return (
@@ -17,12 +19,13 @@ const TeamMatchResult = () => {
         <div className={styles.leftSection}>
           <MatchPoints />
           <TeamPreview />
+          <ResultAndVideo/>
           <StadiumInfo/>
           <TeamMatchRules />
-          {/* <LeagueManners /> */}
-          <RefundPolicy />
+          <LeagueMatchRule/>
+          <LeagueMannerGuide />
+          <TeamRefundPolicy />
         </div>
-        {/* Right Section */}
         <div className={styles.rightSection}>
           <MatchDetails />
         </div>

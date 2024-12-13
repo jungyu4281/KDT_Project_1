@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./TeamPreview.module.css";
 
 const TeamPreview = () => {
-  // 더미 데이터
+  // 팀 데이터
   const teamData = {
     name: "OTP FC",
     stadium: "플랩 스타디움 수원",
@@ -50,38 +50,34 @@ const TeamPreview = () => {
 
   return (
     <section className={styles.section}>
-      <div className={styles.section__header}>
-        <div className={styles.section__title}>
+      <div className={styles.sectionHeader}>
+        <div className={styles.sectionTitle}>
           <h3>매치 프리뷰</h3>
         </div>
       </div>
-      <div className={styles.section__body}>
+      <div className={styles.sectionBody}>
         {/* 엠블럼 */}
-        <div className={styles.team_preview__emblem_wrapper}>
-          <div className={styles.team_preview__emblem}>
-            <img
-              src={teamData.emblem}
-              alt="팀 엠블럼"
-              className={`${styles.team_list__emblem_image} ${styles.team_preview__emblem_selected}`}
-            />
-          </div>
+        <div className={styles.emblemWrapper}>
+          <img
+            src={teamData.emblem}
+            alt="팀 엠블럼"
+            className={styles.emblem}
+          />
         </div>
         {/* 팀 상세 정보 */}
-        <div className={styles.team_preview__list_wrapper}>
+        <div className={styles.detailsWrapper}>
           {teamData.details.map((detail, index) => (
-            <div key={index} className={styles.team_preview__list}>
+            <div key={index} className={styles.detail}>
               <img
                 src={detail.icon}
                 alt={`${detail.title} 아이콘`}
-                className={styles.team_preview__list_icon}
+                className={styles.detailIcon}
               />
-              <span className={styles.team_preview__list_title}>
-                {detail.title}
-              </span>
+              <span className={styles.detailTitle}>{detail.title}</span>
               <span
-                className={`${styles.team_preview__list_value} ${
+                className={`${styles.detailValue} ${
                   detail.title === "팀" || detail.title === "홈 구장"
-                    ? styles.team_preview__list_value_blue
+                    ? styles.detailValueBlue
                     : ""
                 }`}
               >
@@ -91,7 +87,7 @@ const TeamPreview = () => {
                 <img
                   src={teamData.levelAuthIcon}
                   alt="레벨 인증 아이콘"
-                  className={styles.team__profile_level_auth}
+                  className={styles.levelAuthIcon}
                 />
               )}
             </div>

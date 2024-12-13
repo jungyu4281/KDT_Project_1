@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./TeamMatchRules.module.css";
 
 const MatchRules = () => {
-  // 규칙 데이터
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   const rules = [
     {
       icon: "https://d31wz4d3hgve8q.cloudfront.net/static/img/ic_hand.svg",
@@ -40,29 +45,35 @@ const MatchRules = () => {
   ];
 
   return (
-    <section id="matchRule" className={styles.section}>
-      <div className={styles.section__header}>
-        <div className={`${styles.section__title} ${styles.arrow_down}`}>
-          <h3>주요 규칙</h3>
+    <section className={styles.section}>
+      <div className={styles.sectionHeader} onClick={toggleExpand}>
+        <h3 className={styles.sectionTitle}>
+          주요 규칙
+        </h3>
+        <span
+          className={isExpanded ? styles.arrowUp : styles.arrowDown}
+        ></span>
+      </div>
+
+      {isExpanded && (
+        <div className={styles.sectionBody}>
+          <ul>
+            {rules.map((rule, index) => (
+              <li key={index} className={styles.rule_item}>
+                <img
+                  src={rule.icon}
+                  alt={rule.title}
+                  className={styles.rule_icon}
+                />
+                <div>
+                  <h4 className={styles.rule_title}>{rule.title}</h4>
+                  <p className={styles.rule_description}>{rule.description}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-      <div className={`${styles.stadInner} ${styles.section__body}`}>
-        <ul>
-          {rules.map((rule, index) => (
-            <li key={index} className={styles.rule_item}>
-              <img
-                src={rule.icon}
-                alt={rule.title}
-                className={styles.rule_icon}
-              />
-              <div>
-                <h4 className={styles.rule_title}>{rule.title}</h4>
-                <p className={styles.rule_description}>{rule.description}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+      )}
     </section>
   );
 };

@@ -1,72 +1,73 @@
 .section {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-  }
-  
-  .section__header {
-    margin-bottom: 20px;
-  }
-  
-  .section__title h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .section__body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .team_preview__emblem_wrapper {
-    margin-bottom: 20px;
-  }
-  
-  .team_preview__emblem img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 2px solid #007bff;
-  }
-  
-  .team_preview__list_wrapper {
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .team_preview__list {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .team_preview__list_icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-  }
-  
-  .team_preview__list_title {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
-  .team_preview__list_value {
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .team_preview__list_value_blue {
-    color: #007bff;
-  }
-  
-  .team__profile_level_auth {
-    width: 16px;
-    height: 16px;
-    margin-left: 5px;
-  }
-  
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sectionTitle h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sectionBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emblemWrapper {
+  margin-bottom: 20px;
+}
+
+.emblem {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+}
+
+.detailsWrapper {
+  width: 100%;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.detailIcon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.detailTitle {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.detailValue {
+  font-size: 14px;
+  color: #333;
+}
+
+.detailValueBlue {
+  color: #007bff;
+}
+
+.levelAuthIcon {
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+}

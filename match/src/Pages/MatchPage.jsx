@@ -20,7 +20,6 @@ const MatchPageDone = () => {
           <MatchRules />
           <RefundPolicy />
         </div>
-
         {/* Right Section */}
         <div className={styles.rightSection}>
           <MatchDetails />
