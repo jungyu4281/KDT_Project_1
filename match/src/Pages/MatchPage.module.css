@@ -1,5 +1,6 @@
 /* 전체 페이지 배경 */
-.matchPage {
+.matchPage,
+.teamMatchPage {
   background-color: #f5f7fa;
   padding: 10px; /* 좌우 간격을 약간 더 넓게 */
   font-family: Arial, sans-serif;
@@ -12,7 +13,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 5px;
-  max-width: 960px; /* 최대 너비를 설정 (예: 이미지 크기와 일치) */
+  max-width: 960px; /* 최대 너비를 설정 */
   margin: 0 auto; /* 콘텐츠를 중앙에 배치 */
   width: 100%;
 }

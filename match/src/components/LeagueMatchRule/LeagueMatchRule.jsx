@@ -13,7 +13,7 @@ const LeagueMatchRule = () => {
       {/* 섹션 헤더 */}
       <div className={styles.sectionHeader} onClick={toggleExpand}>
         <h3 className={styles.sectionTitle}>
-          매치 룰
+          자세한 규칙
         </h3>
         <span className={isExpanded ? styles.arrowUp : styles.arrowDown}></span>
       </div>

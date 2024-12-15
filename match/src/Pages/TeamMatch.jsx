@@ -1,6 +1,6 @@
 import React from 'react';
 import MatchPoints from '../components/MatchPoints/MatchPoints';
-import StadiumInfo from '../components/Stadiuminfo/StadiumInfo';
+import StadiumInfo from '../components/StadiumInfo/StadiumInfo';
 import TeamPreview from '../components/TeamPreview/TeamPreview';
 import TeamMatchRules from '../components/TeamMatchRules/TeamMatchRules';
 import LeagueMannerGuide from '../components/LeagueMannerGuide/LeagueMannerGuide';

@@ -1,141 +1,140 @@
-/* 매치 포인트 섹션 */
+/* 섹션 */
 .section {
-    margin: 20px 0;
-    padding: 0px 20px 20px 20px;
-    background-color: #ffffff;
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* 매치 포인트 제목 */
-  .resultAndVideosTitle {
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  /* 매치 포인트 리스트 */
-  .resultAndVideos {
-    display: flex;
-    align-items: center; /* 중앙 정렬 */
-    justify-content: space-between;
-    background-color: #ffffff; /* 기본 배경 */
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .resultAndVideosIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    width: 40px; /* 크기 증가 */
-    height: 40px; /* 크기 증가 */
-  }
+  margin: 20px 0;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+}
 
-  .resultAndVideosIcons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 5px;
-    padding-left: 20px;
-    cursor: pointer;
-    width: 25px; /* 크기 증가 */
-    height: 25px; /* 크기 증가 */
-  }
-  
-  .resultAndVideosImage {
-    width: 100%; /* 박스 크기에 맞춤 */
-    height: 100%; /* 박스 크기에 맞춤 */
-    background-size: contain; /* 이미지가 잘리지 않도록 설정 */
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 10px;
-    text-align: center;
-    color: white;
-  }
-  .resultAndVideosScorebord{
-    background-color: #f4f4f4;
-    width: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 40px;
-    border-radius: 8px;
-  }
+/* 헤더 */
+.header {
+  margin-bottom: 15px;
+}
 
-  
-  /* 모달 스타일 추가 */
-  .modalOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-  }
+.title {
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: bold;
+  text-align: left; /* 제목 왼쪽 정렬 */
+  margin: 0;
+  padding-left: 10px; /* 제목 여백 추가 */
+}
+
+/* 본문 */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 각 경기 행 */
+.resultRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px ;
+}
+
+/* 팀 정보 */
+.teamInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0.45; /* 좌우 공간 조정 */
+}
+
+.teamInfo:first-child {
+  justify-content: flex-start; /* 왼쪽 팀 정보는 좌측 정렬 */
+}
+
+.teamInfo:last-child {
+  justify-content: flex-end; /* 오른쪽 팀 정보는 우측 정렬 */
+}
+
+.teamEmblem {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.teamText {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: #333;
+  text-align: left;
+}
+
+/* 점수 */
+.scoreBlock {
+  flex: 0.2; /* 점수판 크기 조정 */
+  text-align: center;
+  display: flex;
+  justify-content: center; /* 중앙 정렬 */
+  align-items: center;
+}
+
+.score {
+  font-size: clamp(16px, 1.8vw, 18px);
+  font-weight: bold;
+  background-color: #f5f7fa;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* 아이콘 (모달 등) */
+.iconBlock {
+  display: flex;
+  gap: 10px;
+}
+
+/* 모달 */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .modalContent {
-    overflow-y: auto;
-    background: #fff;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 480px;
-    max-height: 90%;
-    position: relative;
-    text-align: left;
-    line-height: 1.4;
-    padding: 20px;
-  }
-  
-  .modalHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-  .modalCloseButton {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 0;
-  }
-  
-  .modalButtons {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 20px 0px 20px;
-  }
-  
-  .evaluateButton, .backButton {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .evaluateButton {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .backButton {
-    background-color: #f8f9fa;
-    color: #212529;
-  }
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.modalCloseButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.evaluateButton,
+.backButton {
+  background: #1570ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
