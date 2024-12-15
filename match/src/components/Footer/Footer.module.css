@@ -1,0 +1,108 @@
+/* 전체 푸터 스타일 */
+.footer {
+    background-color: #1a1a1a; /* 어두운 배경색 */
+    color: #ffffff; /* 흰색 글씨 */
+    padding: 50px 20px; /* 상하 좌우 여백 */
+    font-family: "Arial", sans-serif;
+  }
+  
+  .footerWrap {
+    display: flex;
+    justify-content: space-between; /* 좌우 섹션 나누기 */
+    flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
+    max-width: 1080px; /* 최대 너비 */
+    margin: 0 auto; /* 가운데 정렬 */
+    gap: 180px; /* 섹션 사이 간격 */
+  }
+  
+  /* 네비게이션 섹션 */
+  .footerNav {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+  }
+  
+  .footerNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footerNav h3 {
+    margin-bottom: 20px; /* 제목과 항목 사이 간격 */
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .footerNav li {
+    margin-bottom: 10px; /* 각 링크 간의 여백 */
+  }
+  
+  .footerNav li a {
+    text-decoration: none;
+    color: #d3d3d3;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    transition: color 0.3s ease;
+  }
+  
+  .footerNav li a:hover {
+    color: #ffffff; /* 링크에 마우스 올리면 색상 변경 */
+  }
+  
+  /* 회사 정보 섹션 */
+  .company {
+    flex: 1;
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.8;
+  }
+  
+  .company h2 a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .company span,
+  .company a {
+    text-decoration: none;
+    color: #d3d3d3;
+  }
+  
+  .company a:hover {
+    color: #ffffff;
+  }
+  
+  .company .copyright {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #a0a0a0;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .footerWrap {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    .footerNav {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+  
+    .footerNav ul {
+      margin-bottom: 20px;
+    }
+  
+    .company {
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  

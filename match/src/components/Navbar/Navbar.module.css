@@ -1,0 +1,87 @@
+/* 전체 Navbar 스타일 */
+.navbar {
+  width: 100%;
+  height: 48px; /* 컴팩트한 헤더 */
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 950px; /* 이미지 크기에 맞춘 너비 */
+  margin: 0 auto;
+  padding: 0 16px; /* 좌우 여백 */
+}
+
+/* 좌측 섹션: 로고와 햄버거 메뉴 */
+.leftSection {
+  display: flex;
+  align-items: center;
+}
+
+.hamburgerButton {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.logo {
+  width: 54px;
+  height: auto;
+}
+
+/* 우측 섹션: 방패 아이콘, 검색창, 나머지 아이콘 */
+.rightSection {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+/* 검색창 스타일 */
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px 8px;
+  margin-right: 12px; /* 방패 아이콘과의 간격 */
+  width: 260px;
+}
+
+.searchIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+}
+
+.searchInput {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  flex: 1;
+}
+
+/* 나머지 아이콘 스타일 */
+.rightSection a {
+  margin-left: 8px;
+}
+
+.rightSection img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
