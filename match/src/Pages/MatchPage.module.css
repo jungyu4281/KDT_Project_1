@@ -13,7 +13,7 @@
   align-items: flex-start;
   gap: 5px;
   max-width: 960px; /* 최대 너비를 설정 */
-  margin: 0 auto; /* 콘텐츠를 중앙에 배치 */
+  margin: 20px auto; /* 콘텐츠를 중앙에 배치 */
   width: 100%;
 }
 

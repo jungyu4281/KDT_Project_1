@@ -1,16 +1,19 @@
 /* 전체 푸터 스타일 */
 .footer {
-    background-color: #1a1a1a; /* 어두운 배경색 */
-    color: #ffffff; /* 흰색 글씨 */
-    padding: 50px 20px; /* 상하 좌우 여백 */
-    font-family: "Arial", sans-serif;
+    background-color: #363636; /* 어두운 배경색 */
+    color: #dadada; /* 흰색 글씨 */
+    width: 100%; /* 너비를 부모 컨테이너에 맞춤 */
+    margin: 0 auto; /* 중앙 정렬 */
+    overflow: hidden; /* 내부 요소의 확장 방지 */
+    box-sizing: border-box;
+  
   }
   
   .footerWrap {
     display: flex;
     justify-content: space-between; /* 좌우 섹션 나누기 */
     flex-wrap: wrap; /* 작은 화면에서 줄바꿈 */
-    max-width: 1080px; /* 최대 너비 */
+    max-width: 950px; /* 최대 너비 */
     margin: 0 auto; /* 가운데 정렬 */
     gap: 180px; /* 섹션 사이 간격 */
   }
