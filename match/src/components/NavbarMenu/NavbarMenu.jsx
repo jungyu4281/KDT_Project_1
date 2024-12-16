@@ -37,7 +37,7 @@ const NavbarMenu = ({ closeMenu }) => {
               <li>
                 <a href="/explore/earlybird" className={styles.serviceItem}>
                   <img
-                    src="https://d31wz4d3hgve8q.cloudfront.net/media/ic_nav_social_earlybird.svg"
+                    src="https://d31wz4d3hgve8q.cloudfront.net/static/img/explore_earlybird.svg"
                     alt="얼리버드"
                     className={styles.serviceImage}
                   />
@@ -67,7 +67,7 @@ const NavbarMenu = ({ closeMenu }) => {
               <li>
                 <a href="/explore/amateur1" className={styles.serviceItem}>
                   <img
-                    src="https://d31wz4d3hgve8q.cloudfront.net/media/ic_nav_social_amateur1.svg"
+                    src="https://d31wz4d3hgve8q.cloudfront.net/media/ic_nav_social_beginer.svg"
                     alt="아마추어 1"
                     className={styles.serviceImage}
                   />
@@ -77,7 +77,7 @@ const NavbarMenu = ({ closeMenu }) => {
               <li>
                 <a href="/explore/amateur2" className={styles.serviceItem}>
                   <img
-                    src="https://d31wz4d3hgve8q.cloudfront.net/media/ic_nav_social_amateur2.svg"
+                    src="https://d31wz4d3hgve8q.cloudfront.net/media/ic_nav_social_semipro.svg"
                     alt="아마추어 2"
                     className={styles.serviceImage}
                   />
