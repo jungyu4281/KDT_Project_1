@@ -15,6 +15,7 @@ import React, { useState } from "react";
 import KakaoMap from "../../KakaoMap/KakaoMap";
 import FacilitiesContent from "../Reservations/FacilitiesContent/FacilitiesContent";
 import StadiumList from "../Reservations/StadiumList/StadiumList"; // StadiumList 추가
+import StadiumRules from "../Reservations/StadiumRules/StadimRules"
 import SocialMatchContent from "../SocialMatchContent/SocialMatchContent";
 import TeamContent from "../TeamContent/TeamContent";
 import ReviewContent from "../ReviewContent/ReviewContent";
@@ -118,6 +119,7 @@ const StadiumDetails = () => {
           <>
             <FacilitiesContent /> {/* 시설 및 예약 */}
             <StadiumList /> {/* StadiumList를 추가 */}
+            <StadiumRules/> 
           </>
         )}
         {selectedTab === "social" && <SocialMatchContent />}

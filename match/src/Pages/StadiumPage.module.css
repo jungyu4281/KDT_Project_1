@@ -6,9 +6,13 @@
 }
 
 .mainContent {
+  
   display: block; 
   max-width: 1024px;
   margin: 20px auto;
   width: 100%;
   box-sizing: border-box; 
+  
+  margin: 20px 0;
+  border-bottom: 10px solid #f7f7f7; /* 상단 보더라인 추가 */
 }
