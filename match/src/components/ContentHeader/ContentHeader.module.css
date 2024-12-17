@@ -1,6 +1,6 @@
 .imageContainer {
   width: 100%;
-  max-width: 960px; /* 기본 페이지의 최대 너비와 일치 */
+  max-width: 1024px; /* 기본 페이지의 최대 너비와 일치 */
   height: auto;
   margin: 0 auto; /* 가운데 정렬 */
   overflow: hidden;

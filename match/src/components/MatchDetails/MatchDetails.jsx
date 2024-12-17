@@ -169,17 +169,16 @@
 //   )
 // }
 
+
 // export default MatchDetails
-
-
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import KakaoMap from '../KakaoMap/KakaoMap'
 import styles from './MatchDetails.module.css';
 
 const MatchDetails = ({ status }) => {
   const stickyRef = useRef(null);
-  const mapRef = useRef(null); // 지도 표시할 div
   const [isSticky, setIsSticky] = useState(false);
-  const [showMap, setShowMap] = useState(false); // 지도 표시 여부
+  const [showMap, setShowMap] = useState(false); // 지도 보이기/숨기기
 
   const handleScroll = () => {
     if (stickyRef.current) {
@@ -193,31 +192,6 @@ const MatchDetails = ({ status }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 카카오맵 초기화 함수
-  const initializeMap = useCallback(() => {
-    if (mapRef.current && window.kakao) {
-      const container = mapRef.current; // 지도를 표시할 div
-      const options = {
-        center: new window.kakao.maps.LatLng(37.5665, 126.9780), // 위도, 경도
-        level: 3, // 확대 레벨
-      };
-      const map = new window.kakao.maps.Map(container, options);
-
-      // 마커 추가
-      const markerPosition = new window.kakao.maps.LatLng(37.5665, 126.9780);
-      const marker = new window.kakao.maps.Marker({
-        position: markerPosition,
-      });
-      marker.setMap(map);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (showMap) {
-      initializeMap();
-    }
-  }, [showMap, initializeMap]);
-
   const matchInfo = {
     earlyBird: '지금 신청하면 5,000원 할인!',
     regular: '매치 시작 10분 전 신청 마감',
@@ -230,7 +204,7 @@ const MatchDetails = ({ status }) => {
       <div className={styles.matchTime}>12월 30일 월요일 15:00</div>
       <div className={styles.matchPlace}>
         <h1 className={styles.title}>
-          <a href="/stadium/247/matches/">서울 영등포 EA SPORTS FC(더에프필드)</a>
+          <a href="/stadium/247/info/">서울 영등포 EA SPORTS FC(더에프필드)</a>
         </h1>
         <div className={styles.wtgTool}>
           <span className={styles.address}>서울특별시 영등포구 선유로 138</span>
@@ -244,8 +218,8 @@ const MatchDetails = ({ status }) => {
         </div>
       </div>
 
-      {/* 지도 표시 영역 */}
-      {showMap && <div ref={mapRef} className={styles.mapContainer}></div>}
+      {/* 지도 컴포넌트 표시 */}
+      {showMap && <KakaoMap latitude={37.5252} longitude={126.8964} />}
 
       <div className={styles.matchFee}>
         <div className={styles.contentBlock}>

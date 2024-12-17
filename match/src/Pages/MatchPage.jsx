@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Navbar from '../components/Navbar/Navbar';
 import ContentHeader from '../components/ContentHeader/ContentHeader';
 import MatchPoints from '../components/MatchPoints/MatchPoints';
 import TeamPreview from '../components/TeamPreview/TeamPreview';
@@ -17,7 +16,6 @@ import PlayerOfTheMatch from '../components/PlayerOfTheMatch/PlayerOfTheMatch';
 import TeamStandings from '../components/TeamStandings/TeamStandings';
 import MatchData from '../components/MatchData/MatchData';
 import styles from './MatchPage.module.css';
-import Footer from '../components/Footer/Footer';
 
 const MatchPage = () => {
   const { matchId } = useParams();
@@ -92,7 +90,6 @@ const MatchPage = () => {
 
   return (
     <>
-      <Navbar />
       <section className={styles.matchPage}>
         <ContentHeader />
         <div className={styles.mainContent}>
@@ -136,7 +133,6 @@ const MatchPage = () => {
             <MatchDetails status={status} />
           </div>
         </div>
-        <Footer />
       </section>
     </>
   );

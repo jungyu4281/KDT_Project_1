@@ -1,0 +1,14 @@
+
+.stadiumpage{
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.mainContent {
+  display: block; 
+  max-width: 1024px;
+  margin: 20px auto;
+  width: 100%;
+  box-sizing: border-box; 
+}
