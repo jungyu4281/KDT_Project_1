@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MatchPage from "./Pages/MatchPage";
 import StadiumPage from "./Pages/StadiumPage";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Header/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 function App() {

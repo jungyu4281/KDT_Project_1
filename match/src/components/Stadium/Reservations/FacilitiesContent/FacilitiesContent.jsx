@@ -11,7 +11,7 @@ const FacilitiesContent = () => {
   const generateDates = () => {
     const today = new Date();
     const dates = [];
-    for (let i = 0; i < 17; i++) {
+    for (let i = 0; i < 30; i++) {
       const date = new Date(today);
       date.setDate(today.getDate() + i);
       const day = date.getDate();

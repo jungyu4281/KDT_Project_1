@@ -64,6 +64,7 @@ const StadiumList = () => {
               <div className={styles.timeInfo}>12시</div>
               <div className={styles.timeInfo}>18시</div>
               <div className={styles.timeInfo}>00시</div>
+              <div className={styles.timeInfo}></div> {/* 마지막 06시 추가 */}
             </div>
           </li>
         ))}

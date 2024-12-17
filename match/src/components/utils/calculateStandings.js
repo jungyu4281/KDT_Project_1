@@ -1,3 +1,4 @@
+// 팀경기 승/패 값 계산기기
 import { teamImages, teamNames } from '../dummyData/dummyData';
 
 const calculateStandings = (results) => {

@@ -171,8 +171,9 @@
 
 
 // export default MatchDetails
+
 import React, { useState, useRef, useEffect } from 'react';
-import KakaoMap from '../KakaoMap/KakaoMap'
+import KakaoMap from '../../KakaoMap/KakaoMap'
 import styles from './MatchDetails.module.css';
 
 const MatchDetails = ({ status }) => {

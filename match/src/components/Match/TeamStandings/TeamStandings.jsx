@@ -1,6 +1,6 @@
 import React from 'react';
-import calculateStandings from '../utils/calculateStandings';
-import { matchData } from '../dummyData/dummyData';
+import calculateStandings from '../../utils/calculateStandings';
+import { matchData } from '../../dummyData/dummyData';
 import styles from './TeamStandings.module.css';
 
 const TeamStandings = () => {

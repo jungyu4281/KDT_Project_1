@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ContentHeader from '../components/ContentHeader/ContentHeader';
-import MatchPoints from '../components/MatchPoints/MatchPoints';
-import TeamPreview from '../components/TeamPreview/TeamPreview';
-import ResultAndVideo from '../components/ResultAndVideo/ResultAndVideo';
-import StadiumInfo from '../components/StadiumInfo/StadiumInfo';
-import MatchRules from '../components/MatchRules/MatchRules';
-import RefundPolicy from '../components/RefundPolicy/RefundPolicy';
-import TeamMatchRules from '../components/TeamMatchRules/TeamMatchRules';
-import LeagueMatchRule from '../components/LeagueMatchRule/LeagueMatchRule';
-import LeagueMannerGuide from '../components/LeagueMannerGuide/LeagueMannerGuide';
-import TeamRefundPolicy from '../components/TeamRefundPolicy/TeamRefundPolicy';
-import MatchDetails from '../components/MatchDetails/MatchDetails';
-import PlayerOfTheMatch from '../components/PlayerOfTheMatch/PlayerOfTheMatch';
-import TeamStandings from '../components/TeamStandings/TeamStandings';
-import MatchData from '../components/MatchData/MatchData';
+import MatchPoints from '../components/Match/MatchPoints/MatchPoints';
+import TeamPreview from '../components/Match/TeamPreview/TeamPreview';
+import ResultAndVideo from '../components/Match/ResultAndVideo/ResultAndVideo';
+import StadiumInfo from '../components/Match/StadiumInfo/StadiumInfo';
+import MatchRules from '../components/Match/MatchRules/MatchRules';
+import RefundPolicy from '../components/Match/RefundPolicy/RefundPolicy';
+import TeamMatchRules from '../components/Match/TeamMatchRules/TeamMatchRules';
+import LeagueMatchRule from '../components/Match/LeagueMatchRule/LeagueMatchRule';
+import LeagueMannerGuide from '../components/Match/LeagueMannerGuide/LeagueMannerGuide';
+import TeamRefundPolicy from '../components/Match/TeamRefundPolicy/TeamRefundPolicy';
+import MatchDetails from '../components/Match/MatchDetails/MatchDetails';
+import PlayerOfTheMatch from '../components/Match/PlayerOfTheMatch/PlayerOfTheMatch';
+import TeamStandings from '../components/Match/TeamStandings/TeamStandings';
+import MatchData from '../components/Match/MatchData/MatchData';
 import styles from './MatchPage.module.css';
 
 const MatchPage = () => {
@@ -27,8 +27,8 @@ const MatchPage = () => {
   // 더미 데이터
   const matchData = {
     match_id: matchId,
-    match_type: 0, // 0: 소셜 매치, 1: 팀 매치
-    match_start_time: '2024-12-30T19:00:00',
+    match_type: 1, // 0: 소셜 매치, 1: 팀 매치
+    match_start_time: '2024-12-20T19:00:00',
     social_data: {},
     team_data: {
       standings: [

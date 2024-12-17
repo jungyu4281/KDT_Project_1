@@ -12,9 +12,9 @@
 
 
 import React, { useState } from "react";
-import KakaoMap from "../KakaoMap/KakaoMap";
-import FacilitiesContent from "../FacilitiesContent/FacilitiesContent";
-import StadiumList from "../StadiumList/StadiumList"; // StadiumList 추가
+import KakaoMap from "../../KakaoMap/KakaoMap";
+import FacilitiesContent from "../Reservations/FacilitiesContent/FacilitiesContent";
+import StadiumList from "../Reservations/StadiumList/StadiumList"; // StadiumList 추가
 import SocialMatchContent from "../SocialMatchContent/SocialMatchContent";
 import TeamContent from "../TeamContent/TeamContent";
 import ReviewContent from "../ReviewContent/ReviewContent";
