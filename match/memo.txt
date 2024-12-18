@@ -2,17 +2,12 @@ npm start
 
 npm install react-scripts
 
-
-
 git pull origin main
-
-
 
 -> vs깃등록 딸깍
 git add .
 git commit -m "변경한 내용에 대한 설명"
 git push origin main
-
 
 추가 모듈
 ->
@@ -20,13 +15,12 @@ npm install react-slick slick-carousel
 (이미지 슬라이더 스타일링 패키지)
 
 
+
 1 에서 타임별로 1 2 3 개 보여줌.
 
 당일 매치가 끝나면 일단 match/2로 작업중인 매치 결과창이 뜨며, 거기서 3개로 갈림 - 유저토큰
 
-
 https://www.plabfootball.com/match/466096/ (소셜 매치 종료 링크)
-
 
 
 카카오 지도 api (링크 및 양식들)

@@ -1,13 +1,13 @@
 import React from "react";
 import styles from "./TeamList.module.css";
-import TEAM_DATA from "../../dummyData/TeamData"; // 더미 데이터 가져오기
+import TEAM_LIST from "../../dummyData/TeamList"; // 더미 데이터 가져오기
 
 const TeamList = () => {
   return (
     <div className={styles.myFriend}>
       <div className={styles.myFriendBody}>
         <ul className={styles.friendInfo}>
-          {TEAM_DATA.map((team) => (
+          {TEAM_LIST.map((team) => (
             <li key={team.id} className={styles.friendInfoItem}>
               <a href="#" className={styles.friendInfoLink}>
                 <div className={styles.teamListEmblem}>

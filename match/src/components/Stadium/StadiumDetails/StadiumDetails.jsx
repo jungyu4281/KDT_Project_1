@@ -123,7 +123,7 @@ const StadiumDetails = () => {
       <div className={styles.tabContent}>
         {selectedTab === "facilities" && (
           <>
-            <div className={styles.componentWrapper}>
+            <div >
               <FacilitiesContent />
               <StadiumList />
             </div>
@@ -139,7 +139,7 @@ const StadiumDetails = () => {
           </>
         )}
         {selectedTab === "social" && (
-          <div className={styles.componentWrapper}>
+          <div >
             <FacilitiesContent />
             <MatchSchedule />
           </div>
@@ -150,7 +150,7 @@ const StadiumDetails = () => {
           </div>
         )}
         {selectedTab === "review" && (
-          <div className={styles.componentWrapper}>
+          <div >
             <ReviewContent />
           </div>
         )}

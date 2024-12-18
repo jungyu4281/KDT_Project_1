@@ -1,4 +1,4 @@
-const TEAM_DATA = [
+const TEAM_LIST = [
     {
       id: 1,
       name: "SF fc",
@@ -30,5 +30,5 @@ const TEAM_DATA = [
     },
   ];
   
-  export default TEAM_DATA;
+  export default TEAM_LIST;
   
