@@ -9,6 +9,8 @@
 // }, []);
 
 // <pre className={styles.noticeContent}>{noticeContent}</pre>;
+
+
 import React, { useState, useRef } from "react";
 import FacilitiesContent from "../Reservations/FacilitiesContent/FacilitiesContent";
 import StadiumList from "../Reservations/StadiumList/StadiumList";
@@ -16,7 +18,7 @@ import StadiumRules from "../Reservations/StadiumRules/StadimRules";
 import MatchSchedule from "../MatchSchedule/MatchSchedule";
 import ReviewContent from "../ReviewContent/ReviewContent";
 import styles from "./StadiumDetails.module.css";
-import MapTab from "../Reservations/MapTap/MapTap";
+import MapTab from "../Reservations/MapTab/MapTab";
 import StadiumTerms from "../Reservations/StadiumTerms/StadiumTerms";
 import TeamList from "../TeamContent/TeamList";
 
@@ -160,3 +162,167 @@ const StadiumDetails = () => {
 };
 
 export default StadiumDetails;
+
+
+// // DB에서 가져오는 데이터를 가정한 더미 데이터
+// // src/components/StadiumDetails.jsx
+// import DUMMY_STADIUM_INFO from "../../dummyData/StadiumDummyData";
+// import React, { useState, useEffect, useRef } from "react";
+// import FacilitiesContent from "../Reservations/FacilitiesContent/FacilitiesContent";
+// import StadiumList from "../Reservations/StadiumList/StadiumList";
+// import StadiumRules from "../Reservations/StadiumRules/StadimRules";
+// import MatchSchedule from "../MatchSchedule/MatchSchedule";
+// import ReviewContent from "../ReviewContent/ReviewContent";
+// import styles from "./StadiumDetails.module.css";
+// import KakaoMap from "../../KakaoMap/KakaoMap";
+// import StadiumTerms from "../Reservations/StadiumTerms/StadiumTerms";
+// import TeamList from "../TeamContent/TeamList";
+
+// const StadiumDetails = () => {
+//   const mapRef = useRef(null);
+//   const [selectedTab, setSelectedTab] = useState("facilities");
+//   const [coordinates, setCoordinates] = useState(null);
+//   const [loading, setLoading] = useState(true);
+
+//   const currentStadium = DUMMY_STADIUM_INFO[0];
+
+//   useEffect(() => {
+//     const fetchCoordinates = async () => {
+//       if (window.kakao && window.kakao.maps) {
+//         window.kakao.maps.load(() => {
+//           const geocoder = new window.kakao.maps.services.Geocoder();
+//           geocoder.addressSearch(currentStadium.full_address, (results, status) => {
+//             if (status === window.kakao.maps.services.Status.OK) {
+//               const { y: latitude, x: longitude } = results[0];
+//               setCoordinates({ latitude, longitude });
+//               setLoading(false);
+//             } else {
+//               console.error("주소 검색 실패:", currentStadium.full_address);
+//               setLoading(false);
+//             }
+//           });
+//         });
+//       }
+//     };
+
+//     fetchCoordinates();
+//   }, [currentStadium.full_address]);
+
+//   const handleShowMap = () => {
+//     if (mapRef.current) {
+//       mapRef.current.scrollIntoView({ behavior: "smooth" });
+//     }
+//   };
+
+//   return (
+//     <div className={styles.stadiumDetails}>
+//       <div className={styles.stadiumInfo}>
+//         <p className={styles.stadiumInfo__area}>{currentStadium.area}</p>
+//         <p className={styles.stadiumInfo__name}>{currentStadium.name}</p>
+//         <div className={styles.stadiumInfo__addressWrapper}>
+//           <span className={styles.stadiumInfo__address}>
+//             {currentStadium.full_address}
+//           </span>
+//           <span
+//             className={styles.stadiumInfo__addressCopy}
+//             onClick={() =>
+//               navigator.clipboard.writeText(currentStadium.full_address)
+//             }
+//           >
+//             주소 복사
+//           </span>
+//           <span
+//             className={styles.stadiumInfo__addressMap}
+//             onClick={handleShowMap}
+//           >
+//             지도 보기
+//           </span>
+//         </div>
+//       </div>
+
+//       <div className={styles.tabNavigation}>
+//         <div className={styles.navigationWrapper}>
+//           <div
+//             className={`${styles.navigationItem} ${
+//               selectedTab === "facilities" ? styles.selected : ""
+//             }`}
+//             onClick={() => setSelectedTab("facilities")}
+//           >
+//             시설 및 예약
+//           </div>
+//           <div
+//             className={`${styles.navigationItem} ${
+//               selectedTab === "social" ? styles.selected : ""
+//             }`}
+//             onClick={() => setSelectedTab("social")}
+//           >
+//             소셜 매치
+//           </div>
+//           <div
+//             className={`${styles.navigationItem} ${
+//               selectedTab === "team" ? styles.selected : ""
+//             }`}
+//             onClick={() => setSelectedTab("team")}
+//           >
+//             팀
+//           </div>
+//           <div
+//             className={`${styles.navigationItem} ${
+//               selectedTab === "review" ? styles.selected : ""
+//             }`}
+//             onClick={() => setSelectedTab("review")}
+//           >
+//             구장 리뷰
+//           </div>
+//         </div>
+//       </div>
+
+//       <div className={styles.tabContent}>
+//         {selectedTab === "facilities" && (
+//           <>
+//             <div>
+//               <FacilitiesContent />
+//               <StadiumList />
+//             </div>
+//             <div className={styles.componentWrapper}>
+//               <StadiumRules />
+//             </div>
+//             <div ref={mapRef} className={styles.componentWrapper}>
+//               {loading ? (
+//                 <p>지도를 로드 중입니다...</p>
+//               ) : coordinates ? (
+//                 <KakaoMap
+//                   latitude={coordinates.latitude}
+//                   longitude={coordinates.longitude}
+//                 />
+//               ) : (
+//                 <p>지도를 불러오는 데 실패했습니다.</p>
+//               )}
+//             </div>
+//             <div className={styles.componentWrapper}>
+//               <StadiumTerms />
+//             </div>
+//           </>
+//         )}
+//         {selectedTab === "social" && (
+//           <div>
+//             <FacilitiesContent />
+//             <MatchSchedule />
+//           </div>
+//         )}
+//         {selectedTab === "team" && (
+//           <div>
+//             <TeamList />
+//           </div>
+//         )}
+//         {selectedTab === "review" && (
+//           <div>
+//             <ReviewContent />
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default StadiumDetails;

@@ -27,7 +27,7 @@ const MatchPage = () => {
   // 더미 데이터
   const matchData = {
     match_id: matchId,
-    match_type: 1, // 0: 소셜 매치, 1: 팀 매치
+    match_type: 0, // 0: 소셜 매치, 1: 팀 매치
     match_start_time: '2024-12-20T19:00:00',
     social_data: {},
     team_data: {
